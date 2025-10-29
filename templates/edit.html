@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{%block title%}
+    Edit Employee
+{%endblock%}
+{%block body%}
+    <h1 class="mb-4">Edit Employee</h1>
+    <form action="/edit/{{ emp_code }}" method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text">First and last name</span>
+            <input name="first_name" value={{employee[0]}} type="text" aria-label="First name" class="form-control">
+            <input name="last_name" value={{employee[1]}} type="text" aria-label="Last name" class="form-control">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Address</span>
+            <input name="address" type="text" value='{{employee[3]}}' class="form-control" placeholder="Address" arialabel="address" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Position</span>
+            <input name="job_title" type="text" class="form-control" value={{employee[2]}} placeholder="Position" arialabel="position" aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </form>
+{%endblock%}

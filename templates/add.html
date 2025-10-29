@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{%block title%}
+    Add Employee
+{%endblock%}
+{%block body%}
+    <h1 class="mb-4">Add Employee</h1>
+    <form action="/add" method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text">First and last name</span>
+            <input name="first_name" type="text" aria-label="First name" placeholder="First Name" class="form-control">
+            <input name="last_name" type="text" aria-label="Last name" placeholder="Last Name" class="form-control">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Address</span>
+            <input name="address" type="text" class="form-control" placeholder="Address" arialabel="address" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Position</span>
+            <input name="job_title" type="text" class="form-control" placeholder="Position" arialabel="position" aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{%endblock%}
